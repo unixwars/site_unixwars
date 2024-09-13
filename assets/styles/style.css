@@ -21,8 +21,10 @@ a:active,a:hover{
 #container{
 	text-align:center;
 	margin:auto;
-	width:400px;
-	height:400px;
+	width: 95%;
+	height: 95%;
+	max-width:400px;
+	max-height:400px;
 	position:absolute;
 	top:0;
 	bottom:0;
@@ -34,8 +36,15 @@ a:active,a:hover{
 	border:solid 2px #fff;
 	background-color: #000;
 }
-#container h2 {
+#header {
+    position: relative;
     z-index: 10;
+}
+#header h1 {
+    font-size: 1.8em;
+}
+#header h2 {
+    font-size: 1.4em;
 }
 #content{
 	padding:30px;
@@ -44,6 +53,7 @@ a:active,a:hover{
 	border-radius:10px 10px 0 0;
 }
 #content > img {
+    max-width: 95%;
     z-index: 0;
     position: absolute;
 	top:0;

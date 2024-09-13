@@ -15,7 +15,7 @@ function main() {
     }
     let div = document.getElementById('content');
     let images = makeImages(49);
-    let idx = 0;
+    let idx = Math.floor(Math.random() * images.length);
     images[idx].classList.toggle('show');
     div.append(...images);
     setInterval(switchImage, 5000);
