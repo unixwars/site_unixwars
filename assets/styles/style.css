@@ -30,8 +30,6 @@ a:active,a:hover{
 	bottom:0;
 	right:0;
 	left:0;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
 	border-radius:10px;
 	border:solid 2px #fff;
 	background-color: #000;
@@ -48,30 +46,15 @@ a:active,a:hover{
 }
 #content{
 	padding:30px;
-	-webkit-border-radius:10px 10px 0 0;
-	-moz-border-radius:10px 10px 0 0;
 	border-radius:10px 10px 0 0;
 }
 #content > img {
     max-width: 95%;
-    z-index: 0;
     position: absolute;
 	top:0;
 	bottom:0;
 	right:0;
 	left:0;
 	margin:auto;
-    opacity: 0;
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -ms-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
     clip-path: circle();    
-}
-#content .fade {
-    opacity:0;
-}
-#content .show {
-    opacity:1;
 }
