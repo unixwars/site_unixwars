@@ -1,21 +1,57 @@
-
 <!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="width=device-width, initial-scale=1" name="viewport" />
-<title>unixwars.com</title>
-<link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
-<link rel="shortcut icon" href="assets/img/favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unix Wars · breaking things since last Millenium!</title>
+<meta name="description" content="Unix Wars: a small showcase of projects worth keeping.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('uw-theme'); } catch (e) {}
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+<link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-  <div id="container">
-    <div id="header">
-      <h1>{simulation:Life}:</h1>
-      <h2>parameter <i>"fair"</i> unknown</h2>
-    </div>
-    <div id="content"></div>
-  </div>
-  <script src="assets/js/uw.js"></script>    
+  <button id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch theme">
+    <span class="ico ico-sun" style="--i:url(../icons/sun.svg)"></span>
+    <span class="ico ico-moon" style="--i:url(../icons/moon.svg)"></span>
+  </button>
+
+  <header class="hero">
+    <img class="logo" src="assets/img/invader.svg" alt="Unix Wars invader logo" width="220" height="160">
+    <h1>Unix Wars, <span>breaking things since last Millenium!</span></h1>
+  </header>
+
+  <main>
+    <section class="story" aria-labelledby="story-title">
+      <h2 id="story-title">Wait, Unix What?</h2>
+      <p>In the misty valleys of Bell-Labia, two sage archmages forged the First Scroll of the Kernel, written in the ancient runic tongue of C. For a golden age, scholars of the Berkeley Towers and merchants of the Guild of AT&amp;T shared its magic freely across the Realm of Mainframe.</p>
+      <p class="war">Then came the War of the Five Flavors.</p>
+      <details>
+        <summary><span class="more">More...</span><span class="less">Less...</span></summary>
+        <p>Greed corrupted the High Merchant-Lords. Lord Sun forged a secret pact with the Grand Vizier of AT&amp;T to lock the sacred runes behind golden vaults. Outraged, the Iron Barons of IBM, the Dwarf-Kings of DEC, and the Sorcerers of HP formed the Obsidian Syndicate in retaliation.</p>
+        <p>For seven winters, rival factions tore the realm apart. Wizard-engineers hurled incompatible libraries and cursed compilers across the divide. Illusions of Open Look clashed violently against the rigid wards of Motif, and spells spoken in the dialect of System V fizzled into ash inside the fortresses of BSD.</p>
+        <p>While the bickering lords bled their treasuries dry on proprietary walls, the Lich-King Gates of Redmond marched from the Frozen North with a monolithic army of Windows, threatening to conquer all.</p>
+        <p>Yet salvation rose from the quiet forests of Helsinki. There, a young hedge-wizard named Linus&mdash;aided by the bearded hermit Stallman&mdash;wove a brand-new tapestry of magic from scratch and gifted it freely to every peasant in the land. By the time the arrogant lords signed a desperate truce, their empires lay in ruins. The realm belonged to the free folk of the Penguin banner, who claimed the ancient magic without bowing to any king.</p>
+      </details>
+    </section>
+
+    <section class="projects" aria-labelledby="projects-title">
+      <p id="projects-title" class="lead">
+        In the age of AI, shipping projects is cheap. Making one worth keeping is still priceless.
+      </p>
+      <p class="dabble">These are just some of the recent things I&rsquo;ve been dabbling in.</p>
+      <div id="tiles" class="tiles"></div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> unixwars.com</footer>
+
+  <script src="assets/js/uw.js"></script>
 </body>
 </html>
