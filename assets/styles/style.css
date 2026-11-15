@@ -91,3 +91,9 @@ details[open] .more, details:not([open]) .less { display: none; }
 footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 30px 20px 50px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
+
+/* legal pages */
+.legal { max-width: 68ch; padding-top: 48px; }
+.legal h1 { color: var(--cyan); font-size: 2rem; margin: .4em 0; }
+.legal .updated { color: var(--muted); font-size: .85rem; }
+.legal h2 { font-size: 1.2rem; margin: 1.4em 0 .4em; }
